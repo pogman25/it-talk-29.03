@@ -45,6 +45,9 @@ function useGetPeople() {
   );
 
   const loadPeople = useCallback(async () => {
+    if (condition !== CONDITIONS.idle) {
+      return;
+    }
     try {
       const params = next ? { page: next } : {};
       const { data, status } = await axios(PEOPLE_URL, { params });
