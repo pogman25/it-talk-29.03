@@ -8,8 +8,8 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <p>Welcome to the DataArt's IT Talk</p>
+    <p>Here I show several examples</p>
     <StaticImage
       src="../images/gatsby-astronaut.png"
       width={300}

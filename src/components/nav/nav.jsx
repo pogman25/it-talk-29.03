@@ -1,28 +1,33 @@
 import React from 'react';
 
-import { LinkStyled } from './styled';
+import {
+  NavLinksStyled,
+  ListOfLinksStyled,
+  LinkItemStyled,
+  LinkStyled,
+} from './styled';
 
 const Nav = () => {
   return (
-    <nav>
-      <ul>
-        <li>
+    <NavLinksStyled>
+      <ListOfLinksStyled>
+        <LinkItemStyled>
           <LinkStyled to="/" activeClassName="active">
             Main
           </LinkStyled>
-        </li>
-        <li>
-          <LinkStyled to="/page-2/" activeClassName="active">
-            Go to page 2
+        </LinkItemStyled>
+        <LinkItemStyled>
+          <LinkStyled to="/swapi/" activeClassName="active">
+            Test SWAPI
           </LinkStyled>
-        </li>
-        <li>
-          <LinkStyled to="/using-typescript/" activeClassName="active">
-            Go to "Using TypeScript"
+        </LinkItemStyled>
+        <LinkItemStyled>
+          <LinkStyled to="/hoc/" activeClassName="active">
+            Test HOC
           </LinkStyled>
-        </li>
-      </ul>
-    </nav>
+        </LinkItemStyled>
+      </ListOfLinksStyled>
+    </NavLinksStyled>
   );
 };
 
