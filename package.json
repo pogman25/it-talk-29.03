@@ -17,9 +17,12 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
+    "gatsby-plugin-styled-components": "^4.1.0",
     "prettier": "2.2.1"
   },
   "keywords": [
@@ -27,10 +30,11 @@
   ],
   "license": "0BSD",
   "scripts": {
+    "heroku-postbuild": "gatsby build",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "gatsby serve --port $PORT --host 0.0.0.0 ",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
