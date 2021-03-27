@@ -49,6 +49,7 @@ function useGetPeople() {
       return;
     }
     try {
+      dispatch({ type: ACTIONS.sendRequest });
       const params = next ? { page: next } : {};
       const { data, status } = await axios(PEOPLE_URL, { params });
       if (status === 200) {
