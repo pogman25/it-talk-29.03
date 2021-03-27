@@ -8,7 +8,7 @@ import { searchPageFromQuery } from '../utils/searchParse';
 const initialReducer = {
   condition: CONDITIONS.idle,
   people: [],
-  count: 0,
+  count: null,
   next: null,
   previous: null,
 };
@@ -24,8 +24,10 @@ const reducer = (state = initialReducer, action) => {
     case ACTIONS.fulfilled:
       return {
         condition: CONDITIONS.idle,
-        people: action.payload.people,
+        people: [...state.people, ...action.payload.people],
         count: action.payload.count,
+        next: action.payload.next,
+        previous: action.payload.previous,
       };
     case ACTIONS.rejected:
       return { ...state, condition: CONDITIONS.idle };

@@ -1,23 +1,13 @@
-import React, { useEffect } from 'react';
-import useGetPeople from '../hooks/useGetPeople';
+import React from 'react';
+
+import ContextProviderSWAPI from '../context/ContextProviderSWAPI';
+import People from './People';
 
 const SWAPI = () => {
-  const { people, loadPeople } = useGetPeople();
-
-  useEffect(() => {
-    loadPeople();
-  }, []);
-
   return (
-    <div>
-      <ul>
-        {people.map(({ name }) => (
-          <li key={name}>
-            <p>{name}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ContextProviderSWAPI>
+      <People/>
+    </ContextProviderSWAPI>
   );
 };
 
