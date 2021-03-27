@@ -1,12 +1,12 @@
 import React from 'react';
-import PuffLoader from 'react-spinners/PuffLoader';
+import CircleLoader from 'react-spinners/CircleLoader';
 
 import { PreloaderContainerStyled } from './styled';
 
 const Preloader = () => {
   return (
     <PreloaderContainerStyled>
-      <PuffLoader />
+      <CircleLoader />
     </PreloaderContainerStyled>
   );
 };
