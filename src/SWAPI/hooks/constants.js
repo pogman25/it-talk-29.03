@@ -11,4 +11,4 @@ export const CONDITIONS = {
   loading: 'loading',
 };
 
-export const PEOPLE_URL = 'https://swapi.dev/api/people';
+export const PEOPLE_URL = 'https://swapi.py4e.com/api/people';
